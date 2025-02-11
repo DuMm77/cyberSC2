@@ -1,0 +1,52 @@
+/* أنماط صفحات التهديدات والتصيد */
+.warning-signs, .example-grid, .protection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.sign-item, .example-item, .protection-item {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-inset);
+}
+
+.threat-details {
+    margin-top: 1rem;
+}
+
+.threat-details h3 {
+    color: var(--secondary-color);
+    margin: 1rem 0 0.5rem 0;
+}
+
+.threat-details ul {
+    list-style-position: inside;
+    margin-right: 1rem;
+}
+
+.protection-list li {
+    margin-bottom: 1rem;
+    padding-right: 25px;
+    position: relative;
+}
+
+.protection-list li::before {
+    content: '✓';
+    position: absolute;
+    right: 0;
+    color: #2ecc71;
+}
+
+.example-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .warning-signs, .example-grid, .protection-grid {
+        grid-template-columns: 1fr;
+    }
+}
